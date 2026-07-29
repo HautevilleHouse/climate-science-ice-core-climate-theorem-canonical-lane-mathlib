@@ -1,0 +1,20 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.ClimateScienceIceCoreClimateTheoremCanonicalLaneLean.IsotopicPaleothermometry
+import HautevilleHouse.ClimateScienceIceCoreClimateTheoremCanonicalLaneLean.MilankovitchCycles
+import HautevilleHouse.ClimateScienceIceCoreClimateTheoremCanonicalLaneLean.DansgaardOeschgerEvents
+import HautevilleHouse.ClimateScienceIceCoreClimateTheoremCanonicalLaneLean.PaleoclimateEnergyBalance
+import HautevilleHouse.ClimateScienceIceCoreClimateTheoremCanonicalLaneLean.IceCoreStratigraphy
+import HautevilleHouse.ClimateScienceIceCoreClimateTheoremCanonicalLaneLean.ClimateProxies
+
+namespace HautevilleHouse
+namespace ClimateScienceIceCoreClimateTheoremCanonicalLaneLean
+
+def ClimateScienceIceCoreClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem climate_science_ice_core_endgame (A : AdmissibleClass) :
+    ClimateScienceIceCoreClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end ClimateScienceIceCoreClimateTheoremCanonicalLaneLean
+end HautevilleHouse
